@@ -87,3 +87,9 @@ rm -rf .venv
     ```{bash}
     uv pip list
     ```
+
+## Additiona info
+
+### Template
+
+For a broader Python template, go check [Template for Python libraries by Komorebi-AI](https://github.com/Komorebi-AI/python-template)
