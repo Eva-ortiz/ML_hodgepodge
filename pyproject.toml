@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.9,<3.13"
+name = "template"
+description = "Different essentials to teach Machine Learning."
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    "keras-tuner",
+    "keras",
+    "pandas",
+    "scikit-learn",
+    "tensorflow",
+    "pyarrow",
+    "fastparquet",
+]
+
+[project.urls]
+homepage = "https://github.com/Eva-ortiz/ML_hodgepodge"
+
+[project.scripts]
+main = "template.main:main"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools_scm]
+# Importante crear esta sección vacia para activar el plugin
+
+[tool.ruff]
+line-length = 88
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "F", # Pyflakes
+    "UP", # pyupgrade
+    "B", # flake8-bugbear
+    "SIM", # flake8-simplify
+    "I", # isort
+    "D", # pydocstyle
+    "C401",  # flake8-comprehensions: unnecessary-generator-set
+    "C402",  # flake8-comprehensions: unnecessary-generator-dict
+    "C403",  # flake8-comprehensions: unnecessary-list-comprehension-set
+    "C404",  # flake8-comprehensions: unnecessary-list-comprehension-dict
+    "C405",  # flake8-comprehensions: unnecessary-literal-set
+    "W605",  # pycodestyle: invalid-escape-sequence
+]
+
+# Ignore D100 Missing docstring in public module
+ignore = ["D100"]
+[tool.ruff.lint.per-file-ignores]
+# Also ignore `D104` in all `__init__.py` files.
+"__init__.py" = ["D104"]
+"tests/*.py" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.uv]
+dev-dependencies = [
+    "ipykernel",
+    "ruff",
+]
+
+
