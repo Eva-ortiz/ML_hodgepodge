@@ -1388,12 +1388,13 @@ wheels = [
 
 [[package]]
 name = "template"
-version = "0.1.dev3+gdbdb10e.d20241125"
+version = "0.1.dev4+g48c95dd.d20241125"
 source = { editable = "." }
 dependencies = [
     { name = "fastparquet" },
     { name = "keras" },
     { name = "keras-tuner" },
+    { name = "numpy" },
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "scikit-learn" },
@@ -1412,6 +1413,7 @@ requires-dist = [
     { name = "fastparquet" },
     { name = "keras" },
     { name = "keras-tuner" },
+    { name = "numpy" },
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "scikit-learn" },
