@@ -16,6 +16,9 @@ dependencies = [
     "tensorflow",
     "pyarrow",
     "fastparquet",
+    "scipy",
+    "numpy",
+    "matplotlib"
 ]
 
 [project.urls]
